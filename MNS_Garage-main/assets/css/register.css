@@ -139,7 +139,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
+
     text-align: center;
     margin-top: 50px;
     /* Ajustez la marge supérieure selon vos besoins
@@ -148,13 +148,14 @@ body {
 }
 
 .pane {
-    max-width: 540px;
+    max-width: 340px;
     margin: 20px;
     /* Ajustez la marge selon vos besoins */
     padding: 50px;
     /* Ajustez le rembourrage selon vos besoins */
     box-sizing: border-box;
-    border: 2px solid #1A2642;}
+    border: 2px solid #1A2642;
+}
 
 
 
@@ -162,9 +163,13 @@ body {
     margin-top: 20px;
     /* Ajustez la marge supérieure du formulaire selon vos besoins */
 }
-.separator{
+
+.separator {
     max-height: 600px;
 }
+
+
+
 form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -702,8 +707,20 @@ form {
 \*-----------------------------------*/
 
 /* responsive for larger than 575px screen */
+@media (max-width:575px) {
+    .separator{
+        display: none !important;}
 
-@media (min-width: 575px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+    } 
+    
+        .separator2 {
+            width: 80%;
+        }
+    }
+@media (min-width: 576px) {
     /* custom property */
 
     :root {
@@ -768,6 +785,10 @@ form {
     .about-item {
         padding-block: 20px;
     }
+.separator2 {
+    width: 80%;
+}
+    
 
     /* #WORK */
 
@@ -795,7 +816,16 @@ form {
 }
 
 /* responsive for larger than 768px screen */
+@media (max-width:767px) {
+    .separator {
+        display: none !important;
+    }
 
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+}
 @media (min-width: 768px) {
     /* custom property */
 
@@ -872,6 +902,8 @@ form {
         max-width: 520px;
     }
 
+
+
     /* #FOOTER */
 
     .footer-top .container {
@@ -880,6 +912,9 @@ form {
 
     .copyright {
         --fs-6: 1.4rem;
+    }
+    .separator2 {
+        display: none !important;
     }
 }
 
@@ -916,7 +951,9 @@ form {
     .nav-toggle-btn {
         display: none;
     }
-
+.separator2 {
+    display: none !important;
+}
     .header .container {
         gap: 30px;
     }
@@ -984,7 +1021,9 @@ form {
     .hero-banner img {
         width: 20%;
     }
-
+.separator2 {
+    display: none !important;
+}
     /* #SERVICE */
 
     .service-card .card-text {
@@ -1059,6 +1098,8 @@ form {
         z-index: -1;
     }
 
+
+
     /* #WORK */
 
     .has-scrollbar {
@@ -1111,7 +1152,9 @@ form {
         font-size: unset;
         padding-block: 15px;
     }
-
+.separator2 {
+    display: none !important;
+}
     /* #HERO */
 
     .hero {
