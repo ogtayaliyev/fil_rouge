@@ -2,83 +2,203 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backend Dashboard</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .dashboard {
-            display: flex;
-            height: 100vh;
-        }
-
-        .sidebar {
-            background-color: #333;
-            color: #fff;
-            width: 200px;
-            padding: 20px;
-        }
-
-        .sidebar h2 {
-            margin-top: 0;
-        }
-
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .sidebar li {
-            margin-bottom: 10px;
-        }
-
-        .content {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .content h1 {
-            margin-top: 0;
-        }
-
-        .logout {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .logout:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MNS Garage - Auto Maintenance & Repair Service</title>
+    <meta name="title" content="MNS Garage - Auto Maintenance & Repair Service" />
+    <meta name="description" content="This is a vehicle repair website" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/svg+xml" />
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap"
+        rel="stylesheet" />
+    <!-- material icon font - -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,600,0,0" />
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./assets/css/reservation.css" />
+    <!-- preload images -->
+    <link rel="preload" as="image" href="./assets/images/her-banner.png" />
+    <link rel="preload" as="image" href="./assets/images/her-bg.jpg" />
 </head>
 
 <body>
+    <!-- #HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.png" width="128" height="63" alt="MNSgarage home" />
+            </a>
 
-    <div class="dashboard">
-        <div class="sidebar">
-            <h2>Backend Dashboard</h2>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Users</a></li>
-                <li><a href="#">Cars</a></li>
-            </ul>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#home" class="navbar-link">Acuueil</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="navbar-link">A Propos</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="navbar-link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="navbar-link">Location</a>
+                    </li>
+                    <li>
+                        <a href="#" class="navbar-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+                <span class="nav-toggle-icon icon-1"></span>
+                <span class="nav-toggle-icon icon-2"></span>
+                <span class="nav-toggle-icon icon-3"></span>
+            </button>
         </div>
-        <div class="content">
-            <h1>Welcome to the Backend Dashboard</h1>
-            <!-- Content goes here -->
+    </header>
+
+    <main>
+        <article>
+            <!-- #HERO -->
+            <section class="hero has-bg-image" aria-label="home"
+                style="background-image: url(./assets/images/rectangle\ .jpg)" id="home">
+                <div class="container">
+                    <div class="hero-content">
+
+
+                        <p class="section-text">
+
+                        </p>
+
+
+                    </div>
+
+                    <figure class="hero-banner" style="--width: 1228; --height: 789">
+                        <img src="./assets/images/hero-banner.png" width="28" height="9" alt="red motor vehicle" />
+                    </figure>
+                </div>
+            </section>
+            <section id="about" class="section about has-before" aria-labelledby="about-label">
+                <div class="container">
+                    <h2 class="h2 section-title">Réservation des Services</h2>
+                    <form id="reservation-form">
+                        <div class="form-group">
+                            <label for="date">Date :</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Choisir le service :</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Sélectionnez le service</option>
+                                <option value="Pneumatique">Pneumatique</option>
+                                <option value="Changement d'huile">Changement d'huile</option>
+                                <option value="Checkup">Checkup</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="heure">Choisir l'heure :</label>
+                            <input type="time" id="heure" name="heure" required min="09:00" max="18:00" step="3600">
+                        </div>
+                        <button class="btn" type="submit">Réserver</button>
+                    </form>
+                </div>
+
+
+            </section>
+
+        </article>
+    </main>
+
+    <!-- #FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="./assets/images/logo.png" width="128" height="63" alt="mnsgarage home" />
+                    </a>
+
+                    <p class="footer-text">
+                        Réparons ensemble, roulons solidaires : votre garage associatif de confiance.
+                    </p>
+
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="./assets/images/facebook.svg" alt="facebook" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="./assets/images/instagram.svg" alt="instagram" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="./assets/images/twitter.svg" alt="twitter" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Horaires</p>
+                    </li>
+                    <li>
+                        <p class="p">Lundi - Vendredi</p>
+                        <span class="span">12.00 – 14.45</span>
+                    </li>
+                    <li>
+                        <p class="p">Samedi</p>
+                        <span class="span">12.00 – 14.45</span>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Contact Info</p>
+                    </li>
+
+                    <li>
+                        <a href="tel:+01234567890" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">+3 25.25.25.26.25</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@mnsgarage.com" class="footer-link">
+                            <span class="material-symbols-rounded">mail</span>
+                            <span class="span">info@mnsgarage.fr</span>
+                        </a>
+                    </li>
+                    <li>
+                        <address class="footer-link address">
+                            <span class="material-symbols-rounded">location_on</span>
+                            <span class="span">42 rue de Marly,57070 Metz</span>
+                        </address>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="./assets/images/footer-shape-3.png" width="637" height="173" loading="lazy" alt="Shape"
+                class="shape shape-3 move-anim" />
         </div>
-    </div>
 
-    <a href="#" class="logout">Logout</a>
-
+        <div class="footer-bottom">
+            <p class="copyright">Copyright 2024, All Rights Reserved. MNS Garage</p>
+            <img src="./assets/images/footer-shape-2.png" width="788" height="335" loading="lazy" alt="Shape"
+                class="shape shape-2" />
+            <img src="./assets/images/footer-shape-1.png" width="805" height="652" loading="lazy" alt="Red Car"
+                class="shape shape-1 move-anim" />
+        </div>
+    </footer>
+    <!-- custom js link -->
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
