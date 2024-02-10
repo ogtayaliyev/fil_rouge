@@ -131,55 +131,8 @@ body {
 \*-----------------------------------*/
 
 .container {
-    padding-inline: 16px;
+    padding-inline: 20px;
 }
-
-.content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    margin-top: 50px;
-    /* Ajustez la marge supérieure selon vos besoins
-        
-    */
-}
-
-.pane {
-    max-width: 340px;
-    margin: 20px;
-    /* Ajustez la marge selon vos besoins */
-    padding: 50px;
-    /* Ajustez le rembourrage selon vos besoins */
-    box-sizing: border-box;
-    border: 2px solid #1A2642;
-}
-
-
-
-.pane form {
-    margin-top: 20px;
-    /* Ajustez la marge supérieure du formulaire selon vos besoins */
-}
-
-.separator {
-    max-height: 600px;
-}
-
-
-
-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column
-}
-
 
 .material-symbols-rounded {
     --fs: 1em;
@@ -199,7 +152,7 @@ form {
 .section-subtitle {
     max-width: max-content;
     font-family: var(--ff-chakra-petch);
-    font-size: var(--fs-5);
+    font-size: 3rem;
     font-weight: var(--fw-600);
     text-transform: uppercase;
     margin-block-end: 12px;
@@ -209,7 +162,7 @@ form {
 .section-subtitle::before {
     content: "";
     display: inline-block;
-    height: 15px;
+    height: 35px;
     width: 30px;
     margin-block-end: -2px;
     background-repeat: no-repeat;
@@ -275,27 +228,34 @@ form {
 }
 
 .btn {
+    display: inline-block;
     background-color: var(--international-orange-engineering);
     color: var(--white);
-    max-width: max-content;
+    width: 250px;
+    /* Définir une largeur fixe pour tous les boutons */
+    height: 70px;
+    /* Définir une hauteur fixe pour tous les boutons */
     font-family: var(--ff-chakra-petch);
     font-weight: var(--fw-600);
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
+    line-height: 30px;
+    /* Assurez-vous que la hauteur de ligne est la même que la hauteur du bouton */
+    text-align: center;
+    /* Centrer le texte horizontalement */
     border: 1px solid transparent;
     border-radius: var(--radius-pill);
     transition: var(--transition);
     will-change: transform;
+    margin-bottom: 20px;
 }
 
-.btn:is(:hover, :focus-visible) {
+.btn:hover,
+.btn:focus-visible {
     transform: translateY(-5px);
     background-color: var(--oxford-blue-3);
     border-color: var(--white);
 }
+
 
 
 @keyframes moving {
@@ -470,10 +430,7 @@ form {
     text-transform: unset;
 }
 
-.hero .section-text {
-    color: var(--white);
-    margin-block: 14px 18px;
-}
+
 
 .hero .btn {
     margin-inline: auto;
@@ -542,9 +499,7 @@ form {
     color: var(--white);
 }
 
-.about .section-text:nth-child(3) {
-    margin-block: 12px 8px;
-}
+
 
 .about-list {
     display: grid;
@@ -708,18 +663,20 @@ form {
 
 /* responsive for larger than 575px screen */
 @media (max-width:575px) {
-    .separator{
-        display: none !important;}
+    .separator {
+        display: none !important;
+    }
 
-    .content{
+    .content {
         display: flex;
         flex-direction: column;
-    } 
-    
-        .separator2 {
-            width: 80%;
-        }
     }
+
+    .separator2 {
+        width: 80%;
+    }
+}
+
 @media (min-width: 576px) {
     /* custom property */
 
@@ -785,10 +742,11 @@ form {
     .about-item {
         padding-block: 20px;
     }
-.separator2 {
-    width: 80%;
-}
-    
+
+    .separator2 {
+        width: 80%;
+    }
+
 
     /* #WORK */
 
@@ -813,6 +771,8 @@ form {
         bottom: -30px;
         right: 0;
     }
+
+
 }
 
 /* responsive for larger than 768px screen */
@@ -825,7 +785,20 @@ form {
         display: flex;
         flex-direction: column;
     }
+
+    .btn {
+        line-height: 60px;
+    }
+
+    .section-subtitle {
+        font-size: 2rem;
+    }
+
+    .section-text {
+        margin-block: 28px 20px;
+    }
 }
+
 @media (min-width: 768px) {
     /* custom property */
 
@@ -841,8 +814,9 @@ form {
 
     .container,
     .hero-content {
-        max-width: 720px;
+        max-width: 520px;
     }
+
 
     .btn {
         padding: 16px 32px;
@@ -902,7 +876,9 @@ form {
         max-width: 520px;
     }
 
-
+.section-text {
+    margin-block: 18px 20px;
+}
 
     /* #FOOTER */
 
@@ -913,6 +889,7 @@ form {
     .copyright {
         --fs-6: 1.4rem;
     }
+
     .separator2 {
         display: none !important;
     }
@@ -951,9 +928,11 @@ form {
     .nav-toggle-btn {
         display: none;
     }
-.separator2 {
-    display: none !important;
-}
+
+    .separator2 {
+        display: none !important;
+    }
+
     .header .container {
         gap: 30px;
     }
@@ -1021,9 +1000,11 @@ form {
     .hero-banner img {
         width: 20%;
     }
-.separator2 {
-    display: none !important;
-}
+
+    .separator2 {
+        display: none !important;
+    }
+
     /* #SERVICE */
 
     .service-card .card-text {
@@ -1139,18 +1120,17 @@ form {
         font-size: unset;
         padding-block: 15px;
     }
-.separator2 {
-    display: none !important;
-}
+
+    .separator2 {
+        display: none !important;
+    }
+
     /* #HERO */
 
     .hero {
         padding-block: 10px;
     }
-.forgot{
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
+
     .hero .container {
         grid-template-columns: 1fr 0.9fr;
     }
@@ -1275,9 +1255,6 @@ form {
         padding-block: 10px;
     }
 
-    .hero .section-text {
-        padding-inline-end: 90px;
-    }
 
     .hero-banner img {
         width: 30%;
