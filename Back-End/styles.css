@@ -2,8 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(bg.jpg);
-    background-size: cover;
+  background-color: #0056b3;
 }
 
 .container {
@@ -52,4 +51,12 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 50px auto;
+        max-width: 90%;
+    }
 }

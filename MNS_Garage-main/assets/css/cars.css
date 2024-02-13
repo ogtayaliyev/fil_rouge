@@ -129,6 +129,7 @@ body {
 
 .container {
     padding-inline: 20px;
+
 }
 
 .material-symbols-rounded {
@@ -1011,6 +1012,8 @@ body {
         .container,
         .hero .container {
             max-width: 1140px;
+            /*center*/
+            margin-inline: auto;
         }
 
         .btn {

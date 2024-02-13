@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+:root {
+    --sidebar-width: 225px;
+}
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: #0d24a5;
+    position: fixed;
+    top: 0;
+}
+
+.sidebar__heading {
+    font-size: 25px;
+    font-weight: normal;
+    margin-left: 23px;
+    margin-top: 36px;
+    text-transform: uppercase;
+}
+
+.sidebar__nav {
+    margin-top: 40px;
+}
+
+.sidebar__nav__link a {
+    font-size: 20px;
+    color: rgb(245, 236, 236);
+    padding: 14px 10px 14px 20px;
+    display: inline-block;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.sidebar__nav__link a:hover {
+    background-color: #d4d4d4;
+}
+
+.sidebar__nav__link a>span:first-child {
+    display: inline-block;
+    width: 34px;
+}
+
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 50px;
+    left: 1px;
+    width: 4px;
+    border-radius: 3px;
+    background-color: black;
+}
+
+.expand {
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+    padding: 3px 10px;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.sidebar__settings {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #d4d4d4;
+}
+
+.container {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.sidebar__heading {
+    padding: 20px;
+    margin: 0;
+}
+
+.sidebar__nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar__nav__link {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar__nav__link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.active {
+    background-color: #555;
+}
+
+/* Media queries pour les écrans de taille moyenne */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .container {
+        margin-left: 200px;
+    }
+}
+
+/* Media queries pour les écrans de petite taille */
+@media screen and (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .container {
+        margin-left: 0;
+    }
+}
