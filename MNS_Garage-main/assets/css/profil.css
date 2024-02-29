@@ -497,37 +497,6 @@ form {
     z-index: -1;
 }
 
-/*-----------------------------------*\
-  #SERVICE
-\*-----------------------------------*/
-
-.service-banner {
-    display: none;
-}
-
-.service {
-    text-align: center;
-}
-
-.service-list {
-    gap: 0;
-    margin-block-end: 40px;
-}
-
-.service-card .card-icon {
-    max-width: max-content;
-    margin-inline: auto;
-    margin-block-end: 24px;
-}
-
-.service-card .card-text {
-    line-height: 1.2;
-    margin-block: 8px;
-}
-
-.service .btn {
-    margin-inline: auto;
-}
 
 /*-----------------------------------*\
   #ABOUT
@@ -574,57 +543,17 @@ form {
     line-height: 1.1;
 }
 
-/*-----------------------------------*\
-  #WORK
-\*-----------------------------------*/
-
-.work .container {
-    padding-inline: 0;
+.image-ronde{
+    background-size : contain;
+    background-position : 50% 50%; 
+    background-image : url(/img/exemple/filter-image.jpg);
+    display : inline-block;
+    width : 150px; height : 150px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
 }
-
-.work .section-title {
-    margin-block-end: 24px;
-}
-
-.work-card {
-    position: relative;
-}
-
-.work-card .card-content {
-    background-color: var(--white);
-    max-width: 90%;
-    padding: 30px 10px;
-    margin-block-start: -60px;
-    margin-inline: auto;
-    position: relative;
-    text-align: center;
-    box-shadow: var(--shadow);
-}
-
-.work-card .card-subtitle {
-    font-family: var(--ff-chakra-petch);
-    text-transform: uppercase;
-    color: var(--international-orange-engineering);
-    font-weight: var(--fw-700);
-    margin-block-end: 5px;
-}
-
-.work-card .card-title {
-    margin-block-end: 10px;
-}
-
-.work-card .card-btn {
-    background-color: var(--international-orange-engineering);
-    color: var(--white);
-    font-size: 2rem;
-    margin-inline: auto;
-    width: 38px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    border-radius: var(--radius-circle);
-}
-
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -1217,13 +1146,7 @@ form {
         left: -41%;
     }
 
-    /* #WORK */
 
-    .work-card .card-btn {
-        font-size: 2.4rem;
-        width: 55px;
-        height: 55px;
-    }
 
     /* #FOOTER */
 
