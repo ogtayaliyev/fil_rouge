@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6cbbce5-e24f-48e1-94e1-76fe23f98926" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../Fil_Rouge_Doc/demo/src/main/java/com/example/demo/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fred_Cours/src/main/java/com/example/fred_cours/PersonneServlet.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ProjetServlet/src/main/java/com/example/projetservlet/MyServletRequestListener.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../algo/.idea/algo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../java projet qaralama/.idea/java projet qaralama.iml" afterDir="false" />
@@ -122,28 +123,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Node.js.App.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.main.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ogtay/Downloads/light-bootstrap-dashboard-react-master&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Program Files/nodejs/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.npm start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Node.js.App.js.executor": "Run",
+    "Node.js.main.js.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/ogtay/Downloads/light-bootstrap-dashboard-react-master",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Program Files/nodejs/node",
+    "nodejs_package_manager_path": "npm",
+    "npm.npm start.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ogtay\Desktop\untitled\src\Pages" />
@@ -216,6 +220,9 @@
       <workItem from="1709038698922" duration="3750000" />
       <workItem from="1709045677283" duration="2640000" />
       <workItem from="1709141192926" duration="387000" />
+      <workItem from="1709207495342" duration="2066000" />
+      <workItem from="1709209584071" duration="735000" />
+      <workItem from="1709210776525" duration="987000" />
     </task>
     <servers />
   </component>

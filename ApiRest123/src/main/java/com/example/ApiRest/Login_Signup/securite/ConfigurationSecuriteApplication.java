@@ -17,6 +17,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import static org.springframework.http.HttpMethod.GET;
 import static org.springframework.http.HttpMethod.POST;
+import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
 @EnableWebSecurity
@@ -40,7 +41,7 @@ public class ConfigurationSecuriteApplication{
                                         authorize
                                                 .requestMatchers(POST,"/inscription").permitAll()
                                                 .requestMatchers(POST,"/connexion").permitAll()
-                                                .requestMatchers(GET,"/profile").permitAll()
+
                                                 .requestMatchers(GET,"/userinfo").permitAll()
                                                 .anyRequest().authenticated()
                         )
@@ -51,7 +52,15 @@ public class ConfigurationSecuriteApplication{
                         .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                         .build();
     }
-
+//@Bean
+//public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+//    http.authorizeRequests(authorizeRequests -> authorizeRequests.anyRequest()
+//                    .authenticated())
+//            .httpBasic(withDefaults())
+//            .formLogin(withDefaults())
+//            .csrf(AbstractHttpConfigurer::disable);
+//    return http.build();
+//}
     @Bean
     public AuthenticationManager authenticationManager (AuthenticationConfiguration authenticationConfiguration) throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
