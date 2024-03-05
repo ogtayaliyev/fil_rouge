@@ -37,9 +37,9 @@ const Register = () => {
                 email: email,
                 password: password,
             });
-            const { message, token } = response.data;
-            if (message === token) {
-                localStorage.setItem('token', token); // Stocker le token JWT dans le localStorage
+            const { bearer} = response.data;
+            if (bearer) {
+                localStorage.setItem('bearer', bearer); // Stocker le token JWT dans le localStorage
                 navigate('/profil'); // Rediriger l'utilisateur vers la page profil
             } else {
                 alert("Incorrect Email and Password not match");
