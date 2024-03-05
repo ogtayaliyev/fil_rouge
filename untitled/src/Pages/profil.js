@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom'; // Assurez-vous que vous importez correctement useHistory
+import { useNavigate } from 'react-router-dom';
 
 import "../Styles/profil.css";
 import herobanner from "../img/herobanner.png";
@@ -9,15 +9,14 @@ import th from "../img/th.jpeg";
 
 const Profil = () => {
     const [user, setUser] = useState(null);
-    const history = useHistory(); // Assurez-vous que useHistory est correctement importé
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const token = localStorage.getItem('token');
+                const token = localStorage.getItem('bearer');
                 if (!token) {
-                    // Rediriger vers la page de connexion si le jeton JWT est manquant
-                    history.push('/login');
+                    navigate('/login');
                     return;
                 }
 
@@ -27,23 +26,22 @@ const Profil = () => {
                     }
                 };
 
-                const response = await axios.get('http://localhost:8080/api/user', config);
+                const response = await axios.get('http://localhost:8080/api/profil', config);
                 setUser(response.data);
             } catch (error) {
                 console.error('Error fetching user data:', error);
-                // Gérer les erreurs de requête
             }
         };
 
         fetchUserData();
-    }, [history]);
+    }, []);
     return (
         <main>
             <article>
                 <section className="hero has-bg-image" aria-label="home" style={{backgroundImage: `url(${gar5})`}} id="home">
                     <div className="container">
                         <div className="hero-content">
-                            {/* Insérez votre contenu ici */}
+
                         </div>
                         <figure className="hero-banner" style={{width: '1228px', height: '789px'}}>
                             <img src={herobanner} style={{width: '28px', height: '9px'}} alt="red motor vehicle"/>
