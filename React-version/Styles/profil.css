@@ -1,0 +1,16 @@
+.image-ronde{
+    background-size : contain;
+    background-position : 50% 50%;
+    display : inline-block;
+    width : 150px; height : 150px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+}
+.about::before {
+background-image :none !important;
+}
+.btn-container{
+padding-top: 50px;
+}

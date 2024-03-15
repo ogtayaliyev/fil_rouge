@@ -36,7 +36,7 @@
     --fw-700: 700;
 
     /* spacing */
-    --section-padding: 60px;
+    --section-padding: 50px;
 
     /* box shadow */
     --shadow: 0px 0px 100px 0px hsl(216, 9%, 90%);
@@ -131,7 +131,7 @@ body {
 \*-----------------------------------*/
 
 .container {
-    padding-inline: 16px;
+    padding-inline: 20px;
 }
 
 .material-symbols-rounded {
@@ -145,14 +145,14 @@ body {
 .has-bg-image {
     background-repeat: no-repeat;
     background-size: cover;
-    
-    
+
+
 }
 
 .section-subtitle {
     max-width: max-content;
     font-family: var(--ff-chakra-petch);
-    font-size: var(--fs-5);
+    font-size: 3rem;
     font-weight: var(--fw-600);
     text-transform: uppercase;
     margin-block-end: 12px;
@@ -162,7 +162,7 @@ body {
 .section-subtitle::before {
     content: "";
     display: inline-block;
-    height: 15px;
+    height: 35px;
     width: 30px;
     margin-block-end: -2px;
     background-repeat: no-repeat;
@@ -219,34 +219,43 @@ body {
 
 .h2 {
     font-size: var(--fs-3);
+    font-family: var(--ff-chakra-petch);
 }
 
 .h3 {
     font-size: var(--fs-4);
+    font-family: var(--ff-chakra-petch);
 }
 
 .btn {
+    display: inline-block;
     background-color: var(--international-orange-engineering);
     color: var(--white);
-    max-width: max-content;
+    width: 250px;
+    /* Définir une largeur fixe pour tous les boutons */
+    height: 70px;
+    /* Définir une hauteur fixe pour tous les boutons */
     font-family: var(--ff-chakra-petch);
     font-weight: var(--fw-600);
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
+    line-height: 30px;
+    /* Assurez-vous que la hauteur de ligne est la même que la hauteur du bouton */
+    text-align: center;
+    /* Centrer le texte horizontalement */
     border: 1px solid transparent;
     border-radius: var(--radius-pill);
     transition: var(--transition);
     will-change: transform;
+    margin-bottom: 20px;
 }
 
-.btn:is(:hover, :focus-visible) {
+.btn:hover,
+.btn:focus-visible {
     transform: translateY(-5px);
     background-color: var(--oxford-blue-3);
     border-color: var(--white);
 }
+
 
 
 @keyframes moving {
@@ -421,10 +430,7 @@ body {
     text-transform: unset;
 }
 
-.hero .section-text {
-    color: var(--white);
-    margin-block: 14px 18px;
-}
+
 
 .hero .btn {
     margin-inline: auto;
@@ -493,9 +499,7 @@ body {
     color: var(--white);
 }
 
-.about .section-text:nth-child(3) {
-    margin-block: 12px 8px;
-}
+
 
 .about-list {
     display: grid;
@@ -658,8 +662,22 @@ body {
 \*-----------------------------------*/
 
 /* responsive for larger than 575px screen */
+@media (max-width:575px) {
+    .separator {
+        display: none !important;
+    }
 
-@media (min-width: 575px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .separator2 {
+        width: 80%;
+    }
+}
+
+@media (min-width: 576px) {
     /* custom property */
 
     :root {
@@ -725,6 +743,11 @@ body {
         padding-block: 20px;
     }
 
+    .separator2 {
+        width: 80%;
+    }
+
+
     /* #WORK */
 
     .scrollbar-item {
@@ -748,9 +771,33 @@ body {
         bottom: -30px;
         right: 0;
     }
+
+
 }
 
 /* responsive for larger than 768px screen */
+@media (max-width:767px) {
+    .separator {
+        display: none !important;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        line-height: 60px;
+    }
+
+    .section-subtitle {
+        font-size: 2rem;
+    }
+
+    .section-text {
+        margin-block: 28px 20px;
+    }
+}
 
 @media (min-width: 768px) {
     /* custom property */
@@ -767,8 +814,9 @@ body {
 
     .container,
     .hero-content {
-        max-width: 720px;
+        max-width: 520px;
     }
+
 
     .btn {
         padding: 16px 32px;
@@ -828,6 +876,10 @@ body {
         max-width: 520px;
     }
 
+.section-text {
+    margin-block: 18px 20px;
+}
+
     /* #FOOTER */
 
     .footer-top .container {
@@ -836,6 +888,10 @@ body {
 
     .copyright {
         --fs-6: 1.4rem;
+    }
+
+    .separator2 {
+        display: none !important;
     }
 }
 
@@ -871,6 +927,10 @@ body {
 
     .nav-toggle-btn {
         display: none;
+    }
+
+    .separator2 {
+        display: none !important;
     }
 
     .header .container {
@@ -941,6 +1001,10 @@ body {
         width: 20%;
     }
 
+    .separator2 {
+        display: none !important;
+    }
+
     /* #SERVICE */
 
     .service-card .card-text {
@@ -1001,19 +1065,8 @@ body {
         text-align: center;
     }
 
-    .about::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 100%;
-        background-image: url("../images/about-abs-banner.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right;
-        z-index: -1;
-    }
+
+
 
     /* #WORK */
 
@@ -1066,6 +1119,10 @@ body {
     .header .btn {
         font-size: unset;
         padding-block: 15px;
+    }
+
+    .separator2 {
+        display: none !important;
     }
 
     /* #HERO */
@@ -1198,9 +1255,6 @@ body {
         padding-block: 10px;
     }
 
-    .hero .section-text {
-        padding-inline-end: 90px;
-    }
 
     .hero-banner img {
         width: 30%;

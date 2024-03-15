@@ -1,10 +1,3 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
   /* colors */
@@ -169,14 +162,14 @@ body {
   color: var(--white);
 }
 .section-subtitle.\:dark::before {
-  background-image: url("../images/text-bars-light.png");
+  background-image: url("../img/textbarslight.png");
 }
 
 .section-subtitle.\:light {
   color: var(--international-orange-engineering);
 }
 .section-subtitle.\:light::before {
-  background-image: url("../images/text-bars-dark.png");
+  background-image: url("../img/textbarsdark.png");
 }
 
 .section-title {
@@ -225,9 +218,7 @@ body {
   font-family: var(--ff-chakra-petch);
   font-weight: var(--fw-600);
   text-transform: uppercase;
-  display: flex;
   align-items: center;
-  gap: 8px;
   padding: 12px 20px;
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
@@ -237,7 +228,7 @@ body {
 
 .btn:is(:hover, :focus-visible) {
   transform: translateY(-5px);
-  background-color: var(--oxford-blue-3);
+  background-color: var(--international-orange-engineering);
   border-color: var(--white);
 }
 
@@ -259,7 +250,11 @@ body {
 .w-100 {
   width: 100%;
 }
-
+:root {
+  --width: 100px;
+  --height: 50px;
+  --light-gray: #f0f0f0;
+}
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
   background-color: var(--light-gray);
@@ -558,6 +553,13 @@ body {
   place-items: center;
   border-radius: var(--radius-circle);
 }
+
+.card-btn:is(:hover, :focus-visible) {
+  transform: translateY(-5px);
+  background-color: var(--international-orange-engineering);
+  border-color: var(--white);
+}
+
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -887,7 +889,7 @@ body {
   }
 
   .navbar-link::after {
-    content: url("../images/nav-before-img.png");
+    content: url("../img/navbeforeimg.png");
     position: absolute;
     bottom: -8px;
     left: 50%;
@@ -991,12 +993,13 @@ body {
 
   .about::before {
     content: "";
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 50%;
     height: 100%;
-    background-image: url("../images/about-abs-banner.png");
+    background-image: url("../img/aboutabsbaner.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;

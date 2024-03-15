@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+
+  db:
+    container_name: mariadb
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+      MARIADB_DATABASE: apirest
+      MARIADB_USER: root
+      MARIADB_PASSWORD: oktay
+    ports:
+      - 3308:3306
+
+  adminer:
+    image: adminer:4.8.0-standalone
+    restart: always
+    ports:
+      - 9080:8080
+
+#  smtp4dev:
+#    image: rnwood/smtp4dev:v3
+#    restart: always
+#    ports:
+#      - '5000:80'
+#      - '25:25'
+#      - '143:143'
+#    volumes:
+#      - smtp4dev-data
